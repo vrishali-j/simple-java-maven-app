@@ -9,6 +9,7 @@ pipeline {
         stage('Build') { 
             steps {
                 echo "PATH is: $PATH"
+                sh 'source ~/.profile'
                 sh 'mvn -B -DskipTests clean package' 
             }
         }
