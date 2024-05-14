@@ -1,6 +1,10 @@
 pipeline {
     agent any
-    env.PATH = '$PATH:/opt/maven/bin'
+    node {
+      withEnv(['PATH=$PATH:/opt/maven/bin']) {
+    }
+    }
+    
     stages {
         stage('Build') { 
             steps {
