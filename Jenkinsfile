@@ -3,7 +3,6 @@ pipeline {
     node {
       withEnv(['PATH=$PATH:/opt/maven/bin']) {
     }
-    }
     
     stages {
         stage('Build') { 
